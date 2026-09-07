@@ -360,6 +360,34 @@ nav a:hover,
     line-height: 2;
 }
 
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+    align-items: center;
+    max-width: 620px;
+    margin: 0 0 28px;
+    padding: 16px 18px;
+    border: 1px solid rgb(244 201 107 / 45%);
+    border-radius: 12px;
+    background: rgb(30 44 73 / 72%);
+    color: #f7f4ee;
+}
+
+.contact-details strong {
+    color: #f4c96b;
+}
+
+.contact-details a {
+    color: #f4c96b;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: #fff0ac;
+    text-decoration: underline;
+}
+
 .hero-image,
 .about-image {
     position: relative;
