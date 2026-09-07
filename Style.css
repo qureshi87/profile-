@@ -1,0 +1,232 @@
+/* جنرل اسٹائل */
+:root {
+    --primary-color: #f7b733; /* سنہری پیلا */
+    --secondary-color: #333; /* گہرا خاکستری */
+    --background-color: #fdfdfd; /* ہلکا سفید */
+    --text-color: #2c3e50;
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 12px;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.rtl {
+    direction: rtl; /* دائیں سے بائیں ترتیب (اردو کے لیے) */
+}
+
+/* کنٹینر */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ہیڈر */
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* سیکشن اسٹائل */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+/* ہیرو سیکشن */
+#hero {
+    background-color: #fdfdfd;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-image img, .about-image img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+/* میرے بارے میں */
+#about {
+    background-color: #f9f9f9;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* گریڈ اور کارڈ اسٹائل */
+.card {
+    background-color: white;
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* سروسز اور مہارتیں */
+.services-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-item img, .project-item img {
+    max-width: 80px;
+    margin-bottom: 15px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skill-item {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* رابطہ کریں (فارم) */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border-radius: var(--border-radius);
+    border: 2px solid #ccc;
+}
+
+/* بٹن اسٹائل */
+.btn, .link-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover, .link-btn:hover {
+    background-color: #e6a71c;
+    transform: scale(1.05);
+}
+
+/* فوٹر */
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* اینیمیشنز */
+@keyframes float {
+    0% { transform: translatey(0px); }
+    50% { transform: translatey(-15px); }
+    100% { transform: translatey(0px); }
+}
+
+.animated-float img {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* موبائل کے لیے ریسپانسیو ڈیزائن */
+@media (max-width: 768px) {
+    .hero-content, .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+}
