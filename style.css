@@ -553,6 +553,21 @@ nav a:hover,
     object-fit: cover;
 }
 
+.service-icon {
+    display: inline-grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    margin-bottom: 18px;
+    border: 1px solid rgb(244 201 107 / 55%);
+    border-radius: 14px;
+    color: var(--night);
+    background: linear-gradient(135deg, var(--gold), var(--coral));
+    font-size: .85rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+}
+
 .card h3 {
     color: #f7f4ee;
 }
@@ -562,9 +577,22 @@ nav a:hover,
 }
 
 .skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     color: var(--night);
     background: linear-gradient(135deg, var(--gold), #fff0ac);
     box-shadow: 8px 8px 0 rgb(255 118 95 / 24%), 0 18px 28px rgb(0 0 0 / 28%);
+}
+
+.skill-item span {
+    font-weight: 700;
+}
+
+.skill-item small {
+    color: #35445c;
+    font-size: .85rem;
+    line-height: 1.45;
 }
 
 form input,
