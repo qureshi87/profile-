@@ -324,7 +324,7 @@ nav a:hover,
 
 .section {
     position: relative;
-    padding: 120px 0;
+    padding: 92px 0;
 }
 
 #hero {
@@ -607,6 +607,23 @@ footer {
 }
 
 @media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 8px 14px;
+    }
+
+    nav a {
+        font-size: .9rem;
+    }
+
+    .section {
+        padding: 64px 0;
+    }
+
+    .section-title {
+        margin-bottom: 28px;
+    }
+
     header .container {
         align-items: flex-start;
         flex-direction: column;
@@ -614,13 +631,15 @@ footer {
     }
 
     #hero {
-        padding-top: 210px;
+        min-height: auto;
+        padding-top: 170px;
+        padding-bottom: 72px;
     }
 
     .hero-content,
     .about-content {
         grid-template-columns: 1fr;
-        gap: 45px;
+        gap: 28px;
     }
 
     .hero-text,
@@ -636,7 +655,7 @@ footer {
 
     .hero-image,
     .about-image {
-        min-height: 270px;
+        min-height: 220px;
         order: -1;
     }
 
