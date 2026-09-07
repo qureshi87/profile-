@@ -361,17 +361,27 @@ nav a:hover,
     line-height: 2;
 }
 
+#contact > .container {
+    text-align: center;
+}
+
+#contact > .container > p {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .contact-details {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1px;
     max-width: 620px;
-    margin: 0 0 28px;
+    margin: 0 auto 28px;
     overflow: hidden;
     border: 1px solid var(--line);
     border-radius: 16px;
     background: var(--line);
     box-shadow: 0 18px 35px rgb(0 0 0 / 18%);
+    text-align: left;
 }
 
 .contact-item {
